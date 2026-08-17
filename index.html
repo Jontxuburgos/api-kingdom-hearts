@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kingdom Hearts Worlds</title>
+  <style>
+    * { box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background-color: #0d1117; color: #c9d1d9; margin: 0; padding: 2rem; }
+    header { text-align: center; margin-bottom: 2rem; }
+    h1 { color: #58a6ff; margin-bottom: 0.5rem; }
+    
+    .controls { display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem; }
+    select { padding: 0.5rem 1rem; border-radius: 6px; background: #161b22; color: #fff; border: 1px solid #30363d; font-size: 1rem; cursor: pointer; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+    .card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1.5rem; transition: transform 0.2s; }
+    .card:hover { transform: translateY(-4px); border-color: #58a6ff; }
+    .card h2 { margin-top: 0; color: #f0f6fc; font-size: 1.25rem; }
+    .badge { display: inline-block; padding: 0.25rem 0.5rem; border-radius: 12px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; margin-bottom: 1rem; }
+    .badge-disney { background: #1f6feb; color: #fff; }
+    .badge-original { background: #238636; color: #fff; }
+    
+    .info { font-size: 0.9rem; margin-bottom: 0.5rem; }
+    .info strong { color: #8b949e; }
+    .games-list { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
+    .game-tag { background: #21262d; font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Kingdom Hearts Worlds Explorer</h1>
+    <p>Consuming data live from your local Express API</p>
+  </header>
+
+  <div class="controls">
+    <label for="langSelect">Language:</label>
+    <select id="langSelect" onchange="fetchWorlds()">
+      <option value="en">English (Default)</option>
+      <option value="es">Español</option>
+      <option value="ja">日本語 (Japanese)</option>
+    </select>
+  </div>
+
+  <div class="grid" id="worldsGrid">
+    <!-- Dynamic content will be injected here -->
+  </div>
+
+  <script>
+    async function fetchWorlds() {
+      const lang = document.getElementById('langSelect').value;
+      const grid = document.getElementById('worldsGrid');
+      grid.innerHTML = '<p style="text-align:center; width:100%;">Loading worlds...</p>';
+
+      try {
+        // Fetch data directly from your backend endpoint
+        const response = await fetch(`http://localhost:3000/api/v1/worlds?lang=${lang}`);
+        const worlds = await response.json();
+
+        grid.innerHTML = '';
+        worlds.forEach(world => {
+          const badgeClass = world.type.toLowerCase() === 'disney' ? 'badge-disney' : 'badge-original';
+          
+          const gamesHtml = world.games.map(g => `<span class="game-tag">${g}</span>`).join('');
+
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.innerHTML = `
+            <span class="badge ${badgeClass}">${world.type}</span>
+            <h2>${world.name}</h2>
+            <div class="info"><strong>Origin:</strong> ${world.origin}</div>
+            <div class="info"><strong>Field Theme:</strong> ${world.field_theme}</div>
+            <div class="info"><strong>Battle Theme:</strong> ${world.battle_theme}</div>
+            <div class="info" style="margin-top: 1rem;">
+              <strong>Appearances:</strong>
+              <div class="games-list">${gamesHtml}</div>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      } catch (error) {
+        grid.innerHTML = `<p style="color:#f85149; text-align:center; width:100%;">Error connecting to API. Is your server running?</p>`;
+      }
+    }
+
+    // Initial fetch on page load
+    fetchWorlds();
+  </script>
+</body>
+</html>
