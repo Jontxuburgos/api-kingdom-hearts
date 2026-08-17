@@ -1,0 +1,23 @@
+[
+  {
+    "id": "ciudad-de-paso",
+    "nombre": "Ciudad de Paso",
+    "origen": "Original",
+    "juegos": ["Kingdom Hearts", "Kingdom Hearts: Chain of Memories"],
+    "cancion": "Traverse Town"
+  },
+  {
+    "id": "agrabah",
+    "nombre": "Agrabah",
+    "origen": "Disney (Aladdín)",
+    "juegos": ["Kingdom Hearts", "Kingdom Hearts II"],
+    "cancion": "Agrabah"
+  },
+  {
+    "id": "bastion-hueco",
+    "nombre": "Bastión Hueco",
+    "origen": "Original",
+    "juegos": ["Kingdom Hearts", "Kingdom Hearts II"],
+    "cancion": "Hollow Bastion"
+  }
+]
