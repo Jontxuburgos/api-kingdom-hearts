@@ -19,5 +19,3 @@ An open-source RESTful API built to deliver structured data about the worlds acr
 
 ---
 
-## 🚀 Getting Started
-
