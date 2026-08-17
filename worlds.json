@@ -1,0 +1,223 @@
+[
+  {
+    "id": "destiny-islands",
+    "name": {
+      "en": "Destiny Islands",
+      "es": "Islas del Destino",
+      "ja": "デスティニーアイランド"
+    },
+    "origin": {
+      "en": "Original",
+      "es": "Original",
+      "ja": "オリジナル"
+    },
+    "type": "Original",
+    "games": ["Kingdom Hearts", "Kingdom Hearts: Chain of Memories", "Kingdom Hearts II", "Kingdom Hearts III"],
+    "field_theme": "Destiny Islands",
+    "battle_theme": "Bustlin' Business"
+  },
+  {
+    "id": "traverse-town",
+    "name": {
+      "en": "Traverse Town",
+      "es": "Ciudad de Paso",
+      "ja": "トラヴァースタウン"
+    },
+    "origin": {
+      "en": "Original",
+      "es": "Original",
+      "ja": "オリジナル"
+    },
+    "type": "Original",
+    "games": ["Kingdom Hearts", "Kingdom Hearts: Chain of Memories", "Kingdom Hearts 3D: Dream Drop Distance"],
+    "field_theme": "Traverse Town",
+    "battle_theme": "Hand in Hand"
+  },
+  {
+    "id": "wonderland",
+    "name": {
+      "en": "Wonderland",
+      "es": "País de las Maravillas",
+      "ja": "ワンダーランド"
+    },
+    "origin": {
+      "en": "Alice in Wonderland",
+      "es": "Alicia en el país de las maravillas",
+      "ja": "ふしぎの国のアリス"
+    },
+    "type": "Disney",
+    "games": ["Kingdom Hearts", "Kingdom Hearts: Chain of Memories", "Kingdom Hearts coded"],
+    "field_theme": "Welcome to Wonderland",
+    "battle_theme": "To Our Surprise"
+  },
+  {
+    "id": "olympus-coliseum",
+    "name": {
+      "en": "Olympus Coliseum",
+      "es": "Coliseo del Olimpo",
+      "ja": "オリンポスコロシアム"
+    },
+    "origin": {
+      "en": "Hercules",
+      "es": "Hércules",
+      "ja": "ヘラクレス"
+    },
+    "type": "Disney",
+    "games": ["Kingdom Hearts", "Kingdom Hearts: Chain of Memories", "Kingdom Hearts II", "Kingdom Hearts Birth by Sleep", "Kingdom Hearts III"],
+    "field_theme": "Olympus Coliseum",
+    "battle_theme": "Go for It!"
+  },
+  {
+    "id": "deep-jungle",
+    "name": {
+      "en": "Deep Jungle",
+      "es": "Selva Profunda",
+      "ja": "ディープジャングル"
+    },
+    "origin": {
+      "en": "Tarzan",
+      "es": "Tarzán",
+      "ja": "ターザン"
+    },
+    "type": "Disney",
+    "games": ["Kingdom Hearts"],
+    "field_theme": "Deep Jungle",
+    "battle_theme": "Having a Wild Time"
+  },
+  {
+    "id": "agrabah",
+    "name": {
+      "en": "Agrabah",
+      "es": "Agrabah",
+      "ja": "アグラバー"
+    },
+    "origin": {
+      "en": "Aladdin",
+      "es": "Aladdín",
+      "ja": "アラジン"
+    },
+    "type": "Disney",
+    "games": ["Kingdom Hearts", "Kingdom Hearts: Chain of Memories", "Kingdom Hearts II", "Kingdom Hearts 358/2 Days"],
+    "field_theme": "Agrabah",
+    "battle_theme": "Arabian Dream"
+  },
+  {
+    "id": "monstro",
+    "name": {
+      "en": "Monstro",
+      "es": "Monstro",
+      "ja": "モンストロ"
+    },
+    "origin": {
+      "en": "Pinocchio",
+      "es": "Pinocho",
+      "ja": "ピノキオ"
+    },
+    "type": "Disney",
+    "games": ["Kingdom Hearts", "Kingdom Hearts: Chain of Memories", "Kingdom Hearts Birth by Sleep"],
+    "field_theme": "A Very Small Wish",
+    "battle_theme": "Monstro's Collapse"
+  },
+  {
+    "id": "halloween-town",
+    "name": {
+      "en": "Halloween Town",
+      "es": "Ciudad de Halloween",
+      "ja": "ハロウィンタウン"
+    },
+    "origin": {
+      "en": "The Nightmare Before Christmas",
+      "es": "Pesadilla antes de Navidad",
+      "ja": "ナイトメアー・ビフォア・クリスマス"
+    },
+    "type": "Disney",
+    "games": ["Kingdom Hearts", "Kingdom Hearts: Chain of Memories", "Kingdom Hearts II", "Kingdom Hearts 358/2 Days"],
+    "field_theme": "This is Halloween",
+    "battle_theme": "Spooks of Halloween Town"
+  },
+  {
+    "id": "atlantica",
+    "name": {
+      "en": "Atlantica",
+      "es": "Atlántica",
+      "ja": "アトランティカ"
+    },
+    "origin": {
+      "en": "The Little Mermaid",
+      "es": "La Sirenita",
+      "ja": "リトル・マーメイド"
+    },
+    "type": "Disney",
+    "games": ["Kingdom Hearts", "Kingdom Hearts: Chain of Memories", "Kingdom Hearts II"],
+    "field_theme": "Under the Sea",
+    "battle_theme": "An Adventure in Atlantica"
+  },
+  {
+    "id": "neverland",
+    "name": {
+      "en": "Neverland",
+      "es": "Nunca Jamás",
+      "ja": "ネバーランド"
+    },
+    "origin": {
+      "en": "Peter Pan",
+      "es": "Peter Pan",
+      "ja": "ピーター・パン"
+    },
+    "type": "Disney",
+    "games": ["Kingdom Hearts", "Kingdom Hearts: Chain of Memories", "Kingdom Hearts 358/2 Days", "Kingdom Hearts Birth by Sleep"],
+    "field_theme": "Pirate's Grotto",
+    "battle_theme": "Captain Hook's Pirate Ship"
+  },
+  {
+    "id": "100-acre-wood",
+    "name": {
+      "en": "100 Acre Wood",
+      "es": "El Bosque de los Cien Acres",
+      "ja": "100エーカーの森"
+    },
+    "origin": {
+      "en": "Winnie the Pooh",
+      "es": "Winnie the Pooh",
+      "ja": "くまのプーさん"
+    },
+    "type": "Disney",
+    "games": ["Kingdom Hearts", "Kingdom Hearts: Chain of Memories", "Kingdom Hearts II", "Kingdom Hearts III"],
+    "field_theme": "Winnie the Pooh",
+    "battle_theme": "Precious Memories"
+  },
+  {
+    "id": "hollow-bastion",
+    "name": {
+      "en": "Hollow Bastion",
+      "es": "Bastión Hueco",
+      "ja": "ホロウバスティオン"
+    },
+    "origin": {
+      "en": "Original",
+      "es": "Original",
+      "ja": "オリジナル"
+    },
+    "type": "Original",
+    "games": ["Kingdom Hearts", "Kingdom Hearts: Chain of Memories", "Kingdom Hearts II"],
+    "field_theme": "Hollow Bastion",
+    "battle_theme": "Scherzo Di Notte"
+  },
+  {
+    "id": "end-of-the-world",
+    "name": {
+      "en": "End of the World",
+      "es": "Fin del Mundo",
+      "ja": "エンド・オブ・ザ・ワールド"
+    },
+    "origin": {
+      "en": "Original",
+      "es": "Original",
+      "ja": "オリジナル"
+    },
+    "type": "Original",
+    "games": ["Kingdom Hearts"],
+    "field_theme": "End of the World",
+    "battle_theme": "Fragments of Sorrow"
+  }
+]
