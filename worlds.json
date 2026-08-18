@@ -12,6 +12,7 @@
       "ja": "オリジナル"
     },
     "type": "Original",
+    "image_url": "https://static.wikia.nocookie.net/kingdomhearts/images/1/1b/Destiny_Islands_KH.png/revision/latest?cb=20100604103154",
     "games": ["Kingdom Hearts", "Kingdom Hearts: Chain of Memories", "Kingdom Hearts II", "Kingdom Hearts III"],
     "field_theme": "Destiny Islands",
     "battle_theme": "Bustlin' Business"
@@ -29,6 +30,7 @@
       "ja": "オリジナル"
     },
     "type": "Original",
+    "image_url": "https://static.wikia.nocookie.net/kingdomhearts/images/b/b4/Traverse_Town_KH.png/revision/latest?cb=20100423182016",
     "games": ["Kingdom Hearts", "Kingdom Hearts: Chain of Memories", "Kingdom Hearts 3D: Dream Drop Distance"],
     "field_theme": "Traverse Town",
     "battle_theme": "Hand in Hand"
@@ -46,6 +48,7 @@
       "ja": "ふしぎの国のアリス"
     },
     "type": "Disney",
+    "image_url": "https://static.wikia.nocookie.net/kingdomhearts/images/9/93/Wonderland_KH.png/revision/latest?cb=20110202014721",
     "games": ["Kingdom Hearts", "Kingdom Hearts: Chain of Memories", "Kingdom Hearts coded"],
     "field_theme": "Welcome to Wonderland",
     "battle_theme": "To Our Surprise"
@@ -63,6 +66,7 @@
       "ja": "ヘラクレス"
     },
     "type": "Disney",
+    "image_url": "https://static.wikia.nocookie.net/kingdomhearts/images/d/d7/Olympus_Coliseum_KH.png/revision/latest?cb=20100423182006g",
     "games": ["Kingdom Hearts", "Kingdom Hearts: Chain of Memories", "Kingdom Hearts II", "Kingdom Hearts Birth by Sleep", "Kingdom Hearts III"],
     "field_theme": "Olympus Coliseum",
     "battle_theme": "Go for It!"
@@ -80,6 +84,7 @@
       "ja": "ターザン"
     },
     "type": "Disney",
+    "image_url": "https://static.wikia.nocookie.net/kingdomhearts/images/9/98/Deep_Jungle_KH.png/revision/latest?cb=20100423181941",
     "games": ["Kingdom Hearts"],
     "field_theme": "Deep Jungle",
     "battle_theme": "Having a Wild Time"
@@ -97,6 +102,7 @@
       "ja": "アラジン"
     },
     "type": "Disney",
+    "image_url": "https://static.wikia.nocookie.net/kingdomhearts/images/f/fc/Agrabah_KH.png/revision/latest?cb=20100423182320",
     "games": ["Kingdom Hearts", "Kingdom Hearts: Chain of Memories", "Kingdom Hearts II", "Kingdom Hearts 358/2 Days"],
     "field_theme": "Agrabah",
     "battle_theme": "Arabian Dream"
@@ -114,6 +120,7 @@
       "ja": "ピノキオ"
     },
     "type": "Disney",
+    "image_url": "https://static.wikia.nocookie.net/kingdomhearts/images/a/ad/Monstro_KH.png/revision/latest?cb=20100423182348",
     "games": ["Kingdom Hearts", "Kingdom Hearts: Chain of Memories", "Kingdom Hearts Birth by Sleep"],
     "field_theme": "A Very Small Wish",
     "battle_theme": "Monstro's Collapse"
@@ -131,6 +138,7 @@
       "ja": "ナイトメアー・ビフォア・クリスマス"
     },
     "type": "Disney",
+    "image_url": "https://static.wikia.nocookie.net/kingdomhearts/images/c/c6/Halloween_Town_KH.png/revision/latest?cb=20100423181957",
     "games": ["Kingdom Hearts", "Kingdom Hearts: Chain of Memories", "Kingdom Hearts II", "Kingdom Hearts 358/2 Days"],
     "field_theme": "This is Halloween",
     "battle_theme": "Spooks of Halloween Town"
@@ -148,6 +156,7 @@
       "ja": "リトル・マーメイド"
     },
     "type": "Disney",
+    "image_url": "https://static.wikia.nocookie.net/kingdomhearts/images/d/d8/Atlantica_KH.png/revision/latest?cb=20100423182057",
     "games": ["Kingdom Hearts", "Kingdom Hearts: Chain of Memories", "Kingdom Hearts II"],
     "field_theme": "Under the Sea",
     "battle_theme": "An Adventure in Atlantica"
@@ -165,6 +174,7 @@
       "ja": "ピーター・パン"
     },
     "type": "Disney",
+    "image_url": "https://static.wikia.nocookie.net/kingdomhearts/images/7/73/Neverland_KH.png/revision/latest?cb=20100826001528d",
     "games": ["Kingdom Hearts", "Kingdom Hearts: Chain of Memories", "Kingdom Hearts 358/2 Days", "Kingdom Hearts Birth by Sleep"],
     "field_theme": "Pirate's Grotto",
     "battle_theme": "Captain Hook's Pirate Ship"
@@ -182,6 +192,7 @@
       "ja": "くまのプーさん"
     },
     "type": "Disney",
+    "image_url": "https://static.wikia.nocookie.net/kingdomhearts/images/f/fd/100_Acre_Wood_KH_2.png/revision/latest?cb=20100517225344",
     "games": ["Kingdom Hearts", "Kingdom Hearts: Chain of Memories", "Kingdom Hearts II", "Kingdom Hearts III"],
     "field_theme": "Winnie the Pooh",
     "battle_theme": "Precious Memories"
@@ -199,6 +210,7 @@
       "ja": "オリジナル"
     },
     "type": "Original",
+    "image_url": "https://static.wikia.nocookie.net/kingdomhearts/images/a/a7/Hollow_Bastion_KH.png/revision/latest?cb=20120107223742",
     "games": ["Kingdom Hearts", "Kingdom Hearts: Chain of Memories", "Kingdom Hearts II"],
     "field_theme": "Hollow Bastion",
     "battle_theme": "Scherzo Di Notte"
@@ -216,6 +228,7 @@
       "ja": "オリジナル"
     },
     "type": "Original",
+    "image_url": "https://static.wikia.nocookie.net/kingdomhearts/images/3/39/End_of_the_World_KH.png/revision/latest?cb=20100627155101",
     "games": ["Kingdom Hearts"],
     "field_theme": "End of the World",
     "battle_theme": "Fragments of Sorrow"

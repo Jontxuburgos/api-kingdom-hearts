@@ -16,6 +16,7 @@ function formatWorld(world, lang) {
     name: world.name[selectedLang] || world.name.en,
     origin: world.origin[selectedLang] || world.origin.en,
     type: world.type,
+    image_url: world.image_url,
     games: world.games,
     field_theme: world.field_theme,
     battle_theme: world.battle_theme
