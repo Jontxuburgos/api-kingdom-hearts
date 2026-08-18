@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kingdom Hearts Database Explorer</title>
   <link rel="stylesheet" href="styles.css">
+  <script>
+    // Aplica el tema guardado antes de pintar, para evitar parpadeo (flash) de tema incorrecto
+    (function () {
+      const saved = localStorage.getItem('theme');
+      const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+      const theme = saved || (prefersLight ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
 </head>
 <body>
 
@@ -19,19 +28,22 @@
       <button class="nav-btn" id="btnWorlds" onclick="loadWorldsView()">🌍 <span id="txtNavWorlds">Worlds</span></button>
       <button class="nav-btn" id="btnCharacters" onclick="showWip('Characters')">👤 <span id="txtNavCharacters">Characters</span></button>
       <button class="nav-btn" id="btnEnemies" onclick="showWip('Enemies')">👾 <span id="txtNavEnemies">Enemies</span></button>
+      <button class="nav-btn" id="btnAbout" onclick="showAbout()">ℹ️ <span id="txtNavAbout">About</span></button>
     </div>
     
     <div class="right-controls">
       <input type="text" id="searchInput" class="search-input" placeholder="🔍 Search..." oninput="filterWorlds()" style="display: none;">
       
       <div style="display: flex; align-items: center; gap: 0.4rem;">
-        <label for="langSelect" id="lblLanguage" style="font-size: 0.85rem; color: #8b949e;">Language:</label>
+        <label for="langSelect" id="lblLanguage" style="font-size: 0.85rem; color: var(--text-secondary);">Language:</label>
         <select id="langSelect" onchange="handleLanguageChange()">
           <option value="en">English</option>
           <option value="es">Español</option>
           <option value="ja">日本語</option>
         </select>
       </div>
+
+      <button type="button" id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle day/night mode" aria-label="Toggle day/night mode"></button>
     </div>
   </div>
 

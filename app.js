@@ -5,6 +5,7 @@ const i18n = {
     navWorlds: "Worlds",
     navCharacters: "Characters",
     navEnemies: "Enemies",
+    navAbout: "About Us",
     searchPlaceholder: "🔍 Search world or origin...",
     lblLanguage: "Language:",
     available: "Available",
@@ -25,7 +26,13 @@ const i18n = {
     worldTypeSuffix: "World",
     wipTitle: "Section Under Construction",
     wipDesc: "We are currently gathering data across Kingdom Hearts I, II, and III. Check back soon!",
-    apiError: "Error connecting to API. Make sure your Node.js server is running!"
+    apiError: "Error connecting to API. Make sure your Node.js server is running!",
+    aboutTitle: "About This Project",
+    aboutDesc1: "This application is an interactive Kingdom Hearts database developed to explore worlds, characters, and soundtrack details across the saga.",
+    aboutDesc2: "Built as a full-stack project featuring a RESTful API backend built with Express/Node.js and a modular vanilla JavaScript frontend.",
+    techTitle: "Tech Stack & Features",
+    themeToLight: "Switch to light mode",
+    themeToDark: "Switch to dark mode"
   },
   es: {
     subtitle: "Consumiendo API RESTful desde servidor Express",
@@ -33,6 +40,7 @@ const i18n = {
     navWorlds: "Mundos",
     navCharacters: "Personajes",
     navEnemies: "Enemigos",
+    navAbout: "Sobre Nosotros",
     searchPlaceholder: "🔍 Buscar mundo u origen...",
     lblLanguage: "Idioma:",
     available: "Disponible",
@@ -53,7 +61,13 @@ const i18n = {
     worldTypeSuffix: "Mundo",
     wipTitle: "Sección en Construcción",
     wipDesc: "Actualmente estamos recopilando datos de Kingdom Hearts I, II y III. ¡Vuelve pronto!",
-    apiError: "Error al conectar con la API. ¡Asegúrate de que el servidor Node.js está encendido!"
+    apiError: "Error al conectar con la API. ¡Asegúrate de que el servidor Node.js está encendido!",
+    aboutTitle: "Sobre Este Proyecto",
+    aboutDesc1: "Esta aplicación es una base de datos interactiva de Kingdom Hearts desarrollada para explorar mundos, personajes y detalles de la banda sonora de la saga.",
+    aboutDesc2: "Creado como un proyecto Full Stack con una API RESTful en Node.js/Express y un frontend modular en JavaScript vanilla.",
+    techTitle: "Tecnologías y Características",
+    themeToLight: "Cambiar a modo día",
+    themeToDark: "Cambiar a modo noche"
   },
   ja: {
     subtitle: "ExpressバックエンドからRESTful APIを消費",
@@ -61,6 +75,7 @@ const i18n = {
     navWorlds: "ワールド",
     navCharacters: "キャラクター",
     navEnemies: "エネミー",
+    navAbout: "概要",
     searchPlaceholder: "🔍 ワールドや作品を検索...",
     lblLanguage: "言語:",
     available: "利用可能",
@@ -81,7 +96,13 @@ const i18n = {
     worldTypeSuffix: "ワールド",
     wipTitle: "準備中",
     wipDesc: "現在、キングダム ハーツ I、II、III などの データを収集中です。お楽しみに！",
-    apiError: "API接続エラー。Node.jsサーバーが起動しているか確認してください。"
+    apiError: "API接続エラー。Node.jsサーバーが起動しているか確認してください。",
+    aboutTitle: "このプロジェクトについて",
+    aboutDesc1: "このアプリケーションは、キングダム ハーツのワールド、キャラクター、楽曲情報を探索するために開発されたインタラクティブなデータベースです。",
+    aboutDesc2: "Express/Node.jsで構築されたRESTful APIバックエンドと、モジュール式バニラJavaScriptフロントエンドを備えたフルスタックプロジェクトです。",
+    techTitle: "使用技術と機能",
+    themeToLight: "ライトモードに切り替え",
+    themeToDark: "ダークモードに切り替え"
   }
 };
 
@@ -101,8 +122,34 @@ function updateStaticUI() {
   document.getElementById('txtNavWorlds').innerText = t.navWorlds;
   document.getElementById('txtNavCharacters').innerText = t.navCharacters;
   document.getElementById('txtNavEnemies').innerText = t.navEnemies;
+  document.getElementById('txtNavAbout').innerText = t.navAbout;
   document.getElementById('lblLanguage').innerText = t.lblLanguage;
   document.getElementById('searchInput').placeholder = t.searchPlaceholder;
+  updateThemeToggleUI();
+}
+
+// Theme (day/night mode)
+function getTheme() {
+  return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+}
+
+function updateThemeToggleUI() {
+  const btn = document.getElementById('themeToggle');
+  if (!btn) return;
+  const t = i18n[getLang()];
+  const isLight = getTheme() === 'light';
+  // Muestra el icono del modo AL QUE SE CAMBIARÍA al pulsar
+  btn.innerText = isLight ? '🌙' : '☀️';
+  const label = isLight ? t.themeToDark : t.themeToLight;
+  btn.title = label;
+  btn.setAttribute('aria-label', label);
+}
+
+function toggleTheme() {
+  const next = getTheme() === 'light' ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  updateThemeToggleUI();
 }
 
 function toggleSearchInput(show) {
@@ -171,7 +218,7 @@ async function loadWorldsView() {
     loadedWorlds = await response.json();
     filterWorlds();
   } catch (err) {
-    app.innerHTML = `<p style="color:#f85149; text-align:center;">${t.apiError}</p>`;
+    app.innerHTML = `<p style="color:var(--error); text-align:center;">${t.apiError}</p>`;
   }
 }
 
@@ -207,7 +254,7 @@ function filterWorlds() {
         <div class="card-content">
           <span class="badge ${badgeClass}">${w.type}</span>
           <h3>${w.name}</h3>
-          <div style="font-size: 0.85rem; color: #8b949e;">${t.originLabel}: ${w.origin}</div>
+          <div style="font-size: 0.85rem; color: var(--text-secondary);">${t.originLabel}: ${w.origin}</div>
         </div>
       </div>
     `;
@@ -251,8 +298,8 @@ async function loadWorldDetail(id) {
               <h2>${world.name}</h2>
             </div>
             <div style="text-align: right;">
-              <span style="font-size: 0.8rem; color: #8b949e; display: block;">WORLD ID</span>
-              <code style="color: #58a6ff; background: #0d1117; padding: 0.2rem 0.5rem; border-radius: 4px;">${world.id}</code>
+              <span style="font-size: 0.8rem; color: var(--text-secondary); display: block;">WORLD ID</span>
+              <code style="color: var(--accent); background: var(--bg-primary); padding: 0.2rem 0.5rem; border-radius: 4px;">${world.id}</code>
             </div>
           </div>
 
@@ -279,13 +326,13 @@ async function loadWorldDetail(id) {
       </div>
     `;
   } catch (err) {
-    app.innerHTML = `<p style="color:#f85149; text-align:center;">${t.apiError}</p>`;
+    app.innerHTML = `<p style="color:var(--error); text-align:center;">${t.apiError}</p>`;
   }
 }
 
 // VIEW 4: WIP Screen
 function showWip(sectionName) {
-  currentView = 'sectionName';
+  currentView = 'wip';
   currentSectionWip = sectionName;
   toggleSearchInput(false);
   updateStaticUI();
@@ -306,12 +353,43 @@ function showWip(sectionName) {
   `;
 }
 
+// VIEW 5: About Us
+function showAbout() {
+  currentView = 'about';
+  setActiveNav('btnAbout');
+  toggleSearchInput(false);
+  updateStaticUI();
+
+  const t = i18n[getLang()];
+  const app = document.getElementById('app');
+
+  app.innerHTML = `
+    <div class="about-card">
+      <h2>ℹ️ ${t.aboutTitle}</h2>
+      <p>${t.aboutDesc1}</p>
+      <p>${t.aboutDesc2}</p>
+      
+      <div style="margin-top: 1.5rem;">
+        <h4 style="color: var(--accent); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">${t.techTitle}</h4>
+        <div class="tech-stack">
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">Express REST API</span>
+          <span class="tech-tag">Vanilla JS (ES6+)</span>
+          <span class="tech-tag">i18n (Multi-Language)</span>
+          <span class="tech-tag">CSS3 Flex/Grid</span>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 function handleLanguageChange() {
   updateStaticUI();
   if (currentView === 'lobby') showLobby();
   else if (currentView === 'worlds') loadWorldsView();
   else if (currentView === 'world-detail' && currentWorldId) loadWorldDetail(currentWorldId);
   else if (currentView === 'wip' && currentSectionWip) showWip(currentSectionWip);
+  else if (currentView === 'about') showAbout();
 }
 
 // Inicializar la vista al cargar
